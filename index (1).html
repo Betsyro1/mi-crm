@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi CRM</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        overflow: hidden;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        background:
+          radial-gradient(circle at 18% 20%, rgba(129, 140, 248, 0.34), transparent 28rem),
+          radial-gradient(circle at 82% 78%, rgba(45, 212, 191, 0.22), transparent 24rem),
+          linear-gradient(145deg, #10152f 0%, #19153f 52%, #0f2a38 100%);
+      }
+
+      .card {
+        width: min(100%, 760px);
+        padding: clamp(48px, 8vw, 96px) clamp(24px, 6vw, 80px);
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 32px;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 32px 96px rgba(0, 0, 0, 0.28);
+        backdrop-filter: blur(18px);
+      }
+
+      .label {
+        display: block;
+        margin-bottom: 20px;
+        color: #99f6e4;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+      }
+
+      h1 {
+        max-width: 10ch;
+        margin: 0 auto;
+        font-size: clamp(48px, 9vw, 104px);
+        line-height: 0.98;
+        letter-spacing: -0.055em;
+      }
+
+      button {
+        height: 56px;
+        margin-top: 40px;
+        padding: 0 32px;
+        border: 0;
+        border-radius: 999px;
+        color: #17153d;
+        background: #ffffff;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: transform 160ms ease, background 160ms ease;
+      }
+
+      button:hover {
+        background: #ccfbf1;
+        transform: translateY(-2px);
+      }
+
+      button:active {
+        transform: translateY(0);
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 16px;
+        }
+
+        .card {
+          min-height: 72vh;
+          display: grid;
+          place-content: center;
+          border-radius: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <span class="label">MI CRM</span>
+      <h1>Bienvenido a mi CRM</h1>
+      <button id="enterButton" type="button">Entrar al CRM</button>
+    </main>
+
+    <script>
+      document.getElementById("enterButton").addEventListener("click", function () {
+        this.textContent = "¡Todo listo!";
+      });
+    </script>
+  </body>
+</html>
